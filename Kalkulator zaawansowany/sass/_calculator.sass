@@ -1,0 +1,74 @@
+.calculator
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 30%
+    height: 80vh
+    background-color: #ddd
+    transform: translate(-50%,-50%)
+    padding: 5px
+    text-transform: uppercase
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    .memory
+        position: fixed
+        top: 100%
+        left: -2px
+        width: 100%
+        background-color: #bbb
+        height: 88.88%
+        transition: .5s
+        padding: 5px
+        li:first-of-type
+            margin-top: 20px
+        &.active
+            top: 26%
+        .fa-times
+            position: absolute
+            top: 5px
+            right: 10px
+    .upperScreen, .lowerScreen
+        justify-content: flex-end
+        align-items: center
+        padding-right: 5px
+    .lowerScreen
+        font-size: $mainFontSize * 5
+    div
+        flex-basis: 11.11%
+        display: flex
+        flex-direction: row
+        margin: 1px 2px
+        font-size: $mainFontSize * 1.8
+        div
+            flex-grow: 1
+            justify-content: center
+            align-items: center
+            margin: 1px 2px
+            background-color: $numberButtonBgc
+            transition: .5s
+            &:hover
+                opacity: .5
+            sup
+                display: inline-block
+                padding-left: 1px
+                padding-bottom: 15px
+            &:last-of-type
+                background-color: $actionButtonBgc
+        &:nth-of-type(3)
+            div
+                background-color: $memoryButtonBgc
+                align-items: flex-end
+                font-size: $mainFontSize
+        &:nth-of-type(4),&:nth-of-type(5)
+            div
+                background-color: $actionButtonBgc
+        &:last-of-type
+            div:last-of-type
+                background-color: $equalButtonBgc
+    .fas
+        font-size: $mainFontSize * 1.8 - 5px
+    .fa-sort-down
+        display: inline-block
+        font-size: $mainFontSize - 2px
+        padding-bottom: 5px

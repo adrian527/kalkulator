@@ -1,0 +1,14 @@
+@mixin setFonts($fontSize)
+    html
+        font-size: $fontSize
+    .calculator
+        width: 50%
+        .lowerScreen
+            font-size: $fontSize * 5
+        div
+            font-size: $fontSize * 1.8
+    .fas
+        font-size: $fontSize * 1.8 - 5px
+@mixin setWidthAndHeight($width, $height)
+    height: $height
+    width: $width

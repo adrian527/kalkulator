@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 11px;
+}
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 80vh;
+  background-color: #ddd;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.calculator .memory {
+  position: fixed;
+  top: 100%;
+  left: -2px;
+  width: 100%;
+  background-color: #bbb;
+  height: 88.88%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 5px;
+}
+
+.calculator .memory li:first-of-type {
+  margin-top: 20px;
+}
+
+.calculator .memory.active {
+  top: 26%;
+}
+
+.calculator .memory .fa-times {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.calculator .upperScreen, .calculator .lowerScreen {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+}
+
+.calculator .lowerScreen {
+  font-size: 55px;
+}
+
+.calculator div {
+  -ms-flex-preferred-size: 11.11%;
+      flex-basis: 11.11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1px 2px;
+  font-size: 19.8px;
+}
+
+.calculator div div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1px 2px;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.calculator div div:hover {
+  opacity: .5;
+}
+
+.calculator div div sup {
+  display: inline-block;
+  padding-left: 1px;
+  padding-bottom: 15px;
+}
+
+.calculator div div:last-of-type {
+  background-color: #eee;
+}
+
+.calculator div:nth-of-type(3) div {
+  background-color: transparent;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 11px;
+}
+
+.calculator div:nth-of-type(4) div, .calculator div:nth-of-type(5) div {
+  background-color: #eee;
+}
+
+.calculator div:last-of-type div:last-of-type {
+  background-color: cadetblue;
+}
+
+.calculator .fas {
+  font-size: 14.8px;
+}
+
+.calculator .fa-sort-down {
+  display: inline-block;
+  font-size: 9px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 710px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+}
+
+@media (max-width: 370px) {
+  html {
+    font-size: 5px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 25px;
+  }
+  .calculator div {
+    font-size: 9px;
+  }
+  .fas {
+    font-size: 4px;
+  }
+}
+
+@media (max-height: 550px) {
+  .calculator {
+    height: 90vh;
+  }
+}
+
+@media (max-height: 400px) {
+  .calculator {
+    height: 99vh;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 640px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) and (max-height: 750px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) and (max-height: 450px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 40%;
+  }
+}
+
+@media (max-width: 450px) and (max-height: 850px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 80%;
+  }
+}
+
+@media (max-width: 850px) and (max-height: 450px) {
+  html {
+    font-size: 7px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 35px;
+  }
+  .calculator div {
+    font-size: 12.6px;
+  }
+  .fas {
+    font-size: 7.6px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 40%;
+  }
+}
+
+@media (min-width: 750px) and (max-height: 1400px) and (min-height: 1000px) {
+  html {
+    font-size: 11px;
+  }
+  .calculator {
+    width: 50%;
+  }
+  .calculator .lowerScreen {
+    font-size: 55px;
+  }
+  .calculator div {
+    font-size: 19.8px;
+  }
+  .fas {
+    font-size: 14.8px;
+  }
+  .calculator {
+    height: 80vh;
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

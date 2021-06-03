@@ -1,0 +1,43 @@
+@media ( max-width: 710px)
+    @include setFonts($mediumFontSize)
+
+@media ( max-width: 370px)
+    @include setFonts($smallFontSize)
+
+@media ( max-height: 550px)
+    .calculator
+        height: 90vh
+
+@media ( max-height: 400px)
+    .calculator
+        height: 99vh
+
+@media ( max-width: 360px ) and (max-height: 640px)
+    @include setFonts($mediumFontSize)
+    .calculator
+        @include setWidthAndHeight(80%, 80vh)
+
+@media ( max-width: 450px ) and (max-height: 750px)
+    @include setFonts($mediumFontSize)
+    .calculator
+        @include setWidthAndHeight(90%, 80vh)
+
+@media ( max-width: 750px ) and (max-height: 450px)
+    @include setFonts($mediumFontSize)
+    .calculator
+        @include setWidthAndHeight(40%, 80vh)
+
+@media ( max-width: 450px ) and (max-height: 850px)
+    @include setFonts($mediumFontSize)
+    .calculator
+        @include setWidthAndHeight(80%, 80vh)
+
+@media ( max-width: 850px ) and (max-height: 450px)
+    @include setFonts($mediumFontSize)
+    .calculator
+        @include setWidthAndHeight(40%, 80vh)
+
+@media ( min-width: 750px ) and (max-height: 1400px) and (min-height: 1000px)
+    @include setFonts($mainFontSize)
+    .calculator
+        @include setWidthAndHeight(80%, 80vh)
